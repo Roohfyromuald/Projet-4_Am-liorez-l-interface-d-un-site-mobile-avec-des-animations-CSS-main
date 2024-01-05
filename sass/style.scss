@@ -53,6 +53,8 @@ body {
   transform: scale(1.01);
   opacity: 0.9;
 }
+/****BoutonsAnimation****/
+
 
 /******Animation du Loader de chargement************/
 .loader-container {
@@ -96,6 +98,36 @@ body {
     opacity: 0;
     z-index: -1;
   }
+}
+.infoGroup__btn {
+  width: 218px;
+}
+/*****animation card-box****/
+@keyframes anim-card-box {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.entrees {
+  animation: anim-card-box 0.4s;
+}
+
+.plats {
+  animation: anim-card-box 0.8s;
+}
+
+.desserts {
+  animation: anim-card-box 1.2s;
+} 
+/****Fonctionnement***/
+
+.fonctionnement .suggestion__p, .fonctionnement .suggestion__i {
+  margin-left: 25px;
 }
 
 /*********footer**************/
