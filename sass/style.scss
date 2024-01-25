@@ -15,7 +15,7 @@ body {
 }
 
 /********Composants*********/
-/*Nouveau*/
+/*****Nouveau****/
 .restaurants__card__nouveau {
   position: absolute;
   top: 10px;
@@ -30,7 +30,6 @@ body {
 }
 .restaurants__card__nouveau p {
   color: #008766;
-  font-family: Roboto;
 }
 
 /*boutons*/
@@ -38,7 +37,7 @@ body {
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   color: white;
   font-size: 16px;
-  font-family: Roboto;
+  font-family: shrikland;
   font-weight: 500;
   border-radius: 25px;
   padding: 15px 20px;
@@ -56,7 +55,8 @@ body {
 /****BoutonsAnimation****/
 
 
-/******Animation du Loader de chargement************/
+/******Animation du L 
+32oader de chargement************/
 .loader-container {
   display: flex;
   justify-content: center;
@@ -112,7 +112,7 @@ body {
     transform: translateX(0px);
     opacity: 1;
   }
-}
+
 .entrees {
   animation: anim-card-box 0.4s;
 }
@@ -414,7 +414,7 @@ header .header__gps-container .label-content {
   overflow: hidden;
   font-size: 1rem;
   font-family: Roboto;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
 }
 .card-box .card-box__container__carte-text p {

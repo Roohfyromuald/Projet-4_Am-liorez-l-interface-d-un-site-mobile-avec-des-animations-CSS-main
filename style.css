@@ -1,14 +1,7 @@
 /*******Variables********/
 /********mixins*******/
 /****Fonts*****/
-@font-face {
-  font-family: roboto;
-  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: shrikhand;
-  src: url("../assets/fonts/shrinkhand/Shrikhand-Regular.ttf");
-}
+
 /*********resets******/
 body {
   display: flex;
@@ -698,15 +691,15 @@ header .header__gps-container .label-content {
 
 .restaurants .restaurants__card a .restaurants__card__content h3 {
   font-size: 18px;
-  font-family: roboto, sans-serif;
-  font-weight: 700;
+  font-family: roboto, Regular 400;
+  font-weight: bold;
   margin: 0;
 }
 
 .restaurants .restaurants__card a .restaurants__card__content p {
   margin: 0;
   font-size: 17px;
-  font-family: Roboto, sans-serif;
+  font-family: roboto, Regular 400;
   font-weight: 300;
 }
 
