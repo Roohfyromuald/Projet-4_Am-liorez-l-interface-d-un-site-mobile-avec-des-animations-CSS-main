@@ -5,18 +5,13 @@
 ::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
 }
 
 /*Styles généraux*/
 body {
-  font-family: "Roboto", sans-serif;
-    flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1440px;
+  font-family: "roboto", sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
@@ -24,6 +19,9 @@ body {
     width: 1440px;
     margin: 0 auto;
   }
+}
+h2 {
+  font-size: 16px;
 }
 .main h1 {
   font-family: "Roboto", sans-serif;
@@ -42,7 +40,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000000;
-  margin: 40px 0 20px 20px;
+  margin: revert;
 }
 .main h3 {
   font-family: "Shrikhand", cursive;
@@ -70,6 +68,41 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin: 30px 5px 0 0;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.7882352941);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 0.5s ease-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: both;
+}
+.loader__item {
+  border: 8px solid #9356DC;
+  border-top: 8px solid #FF79DA;
+  border-bottom: 8px solid #FF79DA;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1000;
+  }
 }
 
 /*Mise en page du header*/
@@ -240,7 +273,115 @@ footer .footer-container a i {
   color: #353535;
   padding-top: 15px;
 }
+/*****test****/
+.Fonct {
+  margin-bottom: 30px;
+}
+.fonctionnement__h2 {
+  font-size: 24px;
+}
+.Fonct ol {
+  list-style-type: none;
+  display: flex;
+  gap: 36px;
+}
+@media (max-width: 1000px) {
+  .Fonct ol {
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+  }
+}
+.Fonct li {
+  background-color: #F6F6F6;
+  padding: 20px 20px;
+  flex-grow: 1;
+  border-radius: 15px;
+  width: 100%;
+  height: 20px;
+  align-content: center;
+  display: flex;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.Fonct li:hover {
+  transform: scale(1.02);
+}
+.Fonct li .color-icon {
+  color: #7E7E7E;
+  margin-right: 20px;
+}
+.Fonct li .numeration {
+  background-color: #9356DC;
+  color: white;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50px;
+  position: relative;
+  left: -30px;
+  font-weight : bold; 
+}
 
+.container {
+  max-width: 1300px;
+  margin: 17px;
+  position: relative;
+  padding: 15px;
+}
+
+.Explorer {
+  text-align: center;
+  background-color: #F6F6F6;
+  height: 270px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.light {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.sizeTitle {
+  font-size: 24px;
+}
+@media (min-width: 1000px) {
+  .sizeTitle {
+    font-size: 40px;
+  }
+}
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #F6F6F6;
+  padding-bottom: 40px;
+}
+.infoGroup__title {
+  width: 70%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 20px;
+  font-family: roboto, sans-serif;
+}
+.infoGroup__info {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .infoGroup {
+    background-color: #F6F6F6;
+    padding-bottom: 30px;
+  }
+}
+
+/***fintest****/
 /*Mise en forme de la section "functioning"*/
 .functioning {
   width: 100%;
@@ -454,7 +595,7 @@ footer .footer-container a i {
 }
 .menu-title-heart .heart-main {
   top: 14px;
-  left: 80%;
+  left: 83%;
 }
 @media screen and (min-width: 1024px) {
   .menu-title-heart .heart-main {
@@ -678,6 +819,7 @@ footer .footer-container a i {
   background-color: #99e2d0;
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
+  font-weight : bold; 
   color: #10392f;
   display: grid;
   place-items: center;
@@ -783,6 +925,7 @@ footer .footer-container a i {
 .plate-check i {
   color: #ffffff;
 }
+
 
 /*Animation d'apparition du menu */
 /* les paramètres sont dans l'ordre : 
