@@ -1,22 +1,46 @@
-@import './variables';
-//les fonts
-@mixin title-font {
-  font-family: 'Shrikhand', cursive;
+// Mixins //
+
+@mixin card {
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-@mixin text-font {
-  font-family: 'Roboto', sans-serif;
-}
+@mixin button {
+        background: $secondary-color;
+        color: white;
+        border-radius: 25px;
+        height: 50px;
+        width: 218px;
+        font-size: 16px;
+        border: none;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
-//Les ombres
-@mixin header-shadow {
-  box-shadow: 0 0 5px 5px darken($light-grey, 8%);
-}
+        &:hover {
+            background: linear-gradient(356deg,
+                    lighten(rgba(155, 89, 220, 1), 5%) 0%,
+                    lighten(rgba(167, 127, 216, 1), 5%) 33%,
+                    lighten(rgba(255, 121, 218, 1), 5%) 100%);        
+        }
+    }
 
-@mixin shadow-button {
-  box-shadow: 0 0 10px 0 darken($light-grey2, 26%);
-}
 
-@mixin menu-shadow {
-  box-shadow: 0px 4px 15px 0 lighten($text-black, 90%);
-}
+    @mixin heart {
+            color: transparent;
+            background-clip: text;
+            background-image: $heart-color;
+            opacity: 0;
+            transition-duration: 800ms;
+            cursor: pointer;
+
+        &:active {
+            opacity: 1;
+        }
+    
+        @media (min-width:1024px) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+

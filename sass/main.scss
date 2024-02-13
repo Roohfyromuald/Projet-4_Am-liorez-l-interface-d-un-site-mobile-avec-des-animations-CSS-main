@@ -1,16 +1,79 @@
-@use './base/reset';
-@use './base/typographie';
-@use './base/bases';
-@use './layout/header';
-@use './layout/footer';
-@use './pages/home';
-@use './pages/menu1';
-@use './components/loader';
-@use './components/button';
-@use './components/cards';
-@use './components/badge';
-@use './components/plates';
-@use './components/animation-menu';
-@use './components/heart-animation';
-@use './utils/variables';
-@use './utils/mixins';
+
+@import "Utils/variables";
+@import "Utils/mixins";
+@import "Utils/keyframes";
+@import "Layout/header";
+@import "Components/explorer";
+@import "Components/fonctionnement";
+@import "Components/restaurant-cards";
+@import "Layout/footer";
+@import "Components/Restaurant-css/section-restaurants";
+
+
+* {
+    font-family: 'roboto', sans-serif;
+}
+
+.main-container {
+    min-width: 320px;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}   
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+//************ Loader ************//
+
+.loader {
+    position: fixed;
+    background-color: rgba(255, 255, 255,0.95);
+    height: 100vh;
+    inset: 0 0 0 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: finish 3s forwards;
+    
+    p {
+        font-family: shrikhand;
+        font-size: 30px;
+        padding-right: 5px;
+        margin: 0;
+    }
+
+    @for $i from 1 through 8 {
+            &__content#{$i} {
+                animation: loader-content ease-out 1800ms both;
+                animation-iteration-count: 3;
+                animation-delay: $i * .2s;
+            }
+    }
+    
+    &__ustensils {
+        font-size: 20px;
+        padding-left: 30px;
+        color: transparent;
+        background-clip: text;
+        background-image: $heart-color;
+        animation: loader-border ease-in-out 1500ms infinite;
+    }
+        
+}
+
+
+
