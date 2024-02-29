@@ -1,32 +1,56 @@
-.logo {
-    display: flex;
-    justify-content: center;
+/*********Header*********/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  .arrow-left {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 1.5rem;
+  }
+  .header__logo {
+    @include flex-center();
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    @media screen and (min-width: 768px) {
+      box-shadow: none;
+    }
+    img {
+      width: 200px;
+      height: 40px;
+    }
+  }
+  .header__gps-container {
+    @include flex-center();
+    flex-direction: row;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 13px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    position: relative;
-
-    @media (min-width: 768px) {
-        padding: 30px 0;
-        box-shadow: none;
+    gap: 10px;
+    background-color: $header-background;
+    font-family: roboto, sans-serif;
+    height: 60px;
+    .fa-location-dot {
+      font-size: larger;
     }
-
-    
-    // Pages restaurants Desktop //
-
-    &__return {
-        font-size: 20px;
-        position: absolute; 
-        left: 5%;   
+    input {
+      border: none;
+      padding: 5px;
+      font-size: 1rem;
+      background-color: $header-background;
+      font-weight: bold;
+      width: 130px;
     }
-
-    & img {
-       width:162px;
-       height: auto;
+    input:focus {
+      outline: 3px solid $color-elipse;
+      border-radius: 5px;
     }
+    .label-content {
+      font-size: 0;
+    }
+    @media screen and (min-width: 768px) {
+      border-top: none;
+    }
+  }
 }
-
-
-
