@@ -1,14 +1,7 @@
 /*******Variables********/
 /********mixins*******/
 /****Fonts*****/
-@font-face {
-  font-family: roboto;
-  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: shrikhand;
-  src: url("../assets/fonts/shrinkhand/Shrikhand-Regular.ttf");
-}
+
 /*********resets******/
 body {
   display: flex;
@@ -37,10 +30,10 @@ body {
   width: 80px;
   height: 30px;
   border-radius: 5px;
+  font-family: roboto, sans-serif;
 }
 .restaurants__card__nouveau p {
   color: #008766;
-  font-family: Roboto;
 }
 
 /*boutons*/
@@ -48,7 +41,6 @@ body {
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   color: white;
   font-size: 16px;
-  font-family: Roboto;
   font-weight: 500;
   border-radius: 25px;
   padding: 15px 20px;

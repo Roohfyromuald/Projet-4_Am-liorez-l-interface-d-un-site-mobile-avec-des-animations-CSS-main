@@ -1,14 +1,16 @@
 /*********Header*********/
 header {
-  display: flex;
+  display: flexbox;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  }
   .arrow-left {
     position: absolute;
-    top: 14px;
-    left: 14px;
-    font-size: 1.5rem;
+    left: 17px;
+    color: #353535;
+    padding: 5px;
+    font-size: 20px;
   }
   .header__logo {
     @include flex-center();
@@ -53,4 +55,4 @@ header {
       border-top: none;
     }
   }
-}
+
