@@ -1,9 +1,11 @@
 /****Fonts*****/
-@font-face {
-  font-family: roboto;
-  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-@font-face {
-  font-family: shrikhand;
-  src: url("../assets/fonts/shrinkhand/Shrikhand-Regular.ttf");
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }

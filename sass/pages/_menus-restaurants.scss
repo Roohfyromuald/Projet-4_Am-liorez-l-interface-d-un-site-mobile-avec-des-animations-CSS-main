@@ -156,7 +156,7 @@ main {
         overflow: hidden;
         font-size: 1rem;
         font-family: Roboto;
-        font-weight: 600;
+        font-weight: 200;
         margin: 0;
       }
       p {
@@ -164,7 +164,7 @@ main {
         text-overflow: ellipsis;
         overflow: hidden;
         font-size: 0.8rem;
-        font-family: Roboto;
+        font-family: "Roboto", sans-serif;
         font-weight: 300;
         margin: 0;
       }
@@ -174,8 +174,8 @@ main {
       justify-content: center;
       align-items: center;
       height: 100%;
-      font-family: Roboto;
-      font-weight: 700;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       transform: translateX(45px);
       transition: all 0.4s;
       p {
